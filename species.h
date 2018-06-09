@@ -5,18 +5,12 @@
 #include <string>
 #include <iostream>
 
-class Species {
- private:
+struct Species {
   double mass;
   double charge;
-  string name;
+  std::string name;
+  
+Species(double mass_, double charge_, std::string name_) : mass(mass_), charge(charge_), name(name_) {}
+};
 
- public:
-  Species(double mass_, double charge_, string name_);
-
-  double getMass();
-
-  double getCharge();
-
-  string getName();
-}
+#endif

@@ -1,4 +1,4 @@
-OBJS = vector3d.cpp grid.cpp
+OBJS = vector3d.cpp grid.cpp cell.cpp mymath.cpp species.cpp
 
 CC = g++
 

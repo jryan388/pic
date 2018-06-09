@@ -1,20 +1,27 @@
 #ifndef CELL_H_INCLUDED__
 #define CELL_H_INCLUDED__
 
+#include <list>
 #include <vector>
 #include "vector3d.h"
 #include <string>
 #include <iostream>
+#include "species.h"
 
 class Cell {
  private:
-  double originX;
-  double originY;
-  vector< vector< Vector3D > > poss;
-  vector< vector< Vector3D > > vels;
+  Vector3D origin;
+  Vector3D size;
+  std::vector< std::vector< Vector3D >* > poss;
+  std::vector< std::vector< Vector3D >* > vels;
+  std::vector< Species > species;
   
  public:
-  Cell(double originX_, double originY_, vector< vector< poss_ > >, vector< vector< vels_ > >);
+  Cell(Vector3D origin, Vector3D size);
     
-  
-}
+  void addParticle(Vector3D pos, Vector3D vel, Species speciesNew);
+
+  void print();
+};
+
+#endif
