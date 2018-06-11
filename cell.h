@@ -7,6 +7,7 @@
 #include <string>
 #include <iostream>
 #include "species.h"
+#include "cube.h"
 
 class Cell {
  private:
@@ -22,6 +23,8 @@ class Cell {
   void addParticle(Vector3D pos, Vector3D vel, Species speciesNew);
 
   void print();
+
+  Cube getDensity();
 };
 
 #endif

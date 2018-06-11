@@ -41,3 +41,13 @@ void Grid::addParticle(Vector3D pos, Vector3D vel, Species species) {
 Cell* Grid::getCell(int ix, int iy, int iz) {
   return cells[ix][iy][iz];
 }
+
+void Grid::computeDensity() {
+  for (int xi = 0; xi < cellsX; xi++) {
+    for (int yi = 0; yi < cellsY; yi++) {
+      for (int zi = 0; zi < cellsY; zi++) {
+	Cube den = cells[xi][yi][zi]->getDensity();
+      }
+    }
+  }
+}

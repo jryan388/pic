@@ -9,6 +9,7 @@
 #include <iostream>
 #include "cell.h"
 #include "species.h"
+#include "cube.h"
 
 class Grid {
  private:
@@ -17,6 +18,9 @@ class Grid {
   int cellsX;
   int cellsY;
   int cellsZ;
+  
+
+  
  public:
   Grid(int cellsX_, int cellsY_, int cellsZ_, Vector3D cellSize_);
 
@@ -24,6 +28,8 @@ class Grid {
 
   Cell* getCell(int ix, int iy, int iz);
 
+  void computeDensity();
+  
 };
 
 #endif

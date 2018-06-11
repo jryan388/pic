@@ -31,8 +31,6 @@ void Cell::addParticle(Vector3D pos, Vector3D vel, Species speciesNew) {
   print();
 }
 
-
-
 void Cell::print() {
   std::cout << "Contents of cell with origin (" << origin.x << ", "
 	    << origin.y << ", " << origin.z << ") " << std::endl;
@@ -49,4 +47,8 @@ void Cell::print() {
 		<< ")" << std::endl;
     }
   }
+}
+
+Cube Cell::getDensity() {
+  return Cube(0,0,0,0,0,0);
 }
