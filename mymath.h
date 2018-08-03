@@ -3,6 +3,8 @@
 
 #include <cstdlib>
 #include <cmath>
+#include <vector>
+#include <iostream>
 
 namespace MyMath {
   inline double rand(){ 
@@ -67,8 +69,21 @@ namespace MyMath {
     }
   }
 
-
   const double PI = 3.14159265358979323846;
+
+  //std::vector<double> gaussianDist(int len, double x0, double sigmaX, double start, double end, double Ymax) {
+  //  return std::vector<double>;
+  //}
+
+
+  std::vector<double> gaussianDistMC(int len, double a, double x0, double start, double end);
+
+  std::vector<double> gaussianDistOrdered(int len, int cells, double a, double x0, double start, double end);
+
+  double maxwellPDF3D(double x, double a);
+
+  std::vector<double> maxwellDist3D(int len, double a, double start, double end);
+
 
   /*static inline double rand();
   static inline double rand(double end);

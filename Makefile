@@ -4,7 +4,7 @@ CC = g++
 
 COMPILER_FLAGS = -std=c++11
 
-LINKER_FLAGS = -fopenmp
+LINKER_FLAGS = -fopenmp -lfftw3 -lm
 
 all : main.cpp $(OBJS)
 	$(CC) main.cpp $(OBJS) $(COMPILER_FLAGS) $(LINKER_FLAGS) -o sim
